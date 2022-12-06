@@ -1,0 +1,26 @@
+* {
+    font-family: "Barlow Semi Condensed", serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Bungee Outline";
+}
+
+body {
+    background-image: url("file:///Users/lucasff/Skola/Malmo%CC%88%20Universitet/DU1/Projekt/media/33537_quentin-tarantino-premiere-django-desencadenado-paris.webp");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body > div {
+    background-color: rgba(0, 0, 0, 0.1);
+    
+    border-radius: 20px;
+
+    padding: 20px;
+    
+    margin: 30px;
+    margin-top: 80px;
+}
