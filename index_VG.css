@@ -1,31 +1,39 @@
-* {
+:root {
     font-family: "Barlow Semi Condensed", serif;
-    box-sizing: border-box;
     color: white;
     
     --width-size:2.2vw;
 }
 
 h1 {
-    font-family: "Bungee Outline";
+    font-family: "Bungee Outline", serif;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+}
+
+body > div{
     background-image: url("file:///Users/lucasff/Skola/Malmo%CC%88%20Universitet/DU1/Projekt/media/33537_quentin-tarantino-premiere-django-desencadenado-paris.webp");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    
+    padding: 80px 50px;
 }
 
-body > div {
+body > div > div  {
     background-color: rgba(0, 0, 0, 0.4);
     
     border-radius: 20px;
 
     padding: 20px;
     
-    margin: 80px 30px;
 }
 
 header h1 {
@@ -65,4 +73,33 @@ article {
     margin: 20px 0;
 
     padding: 10px;
+    
+    display: grid;
+    
+    grid-gap: 10px;
+    
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    
+    grid-template-areas: 
+        "album_data album_data cover"
+        "album_data album_data cover"
+        "anecdotes anecdotes anecdotes"
+    ;
+}
+
+.album_data {
+    grid-area:album_data;
+}
+
+.cover {
+    grid-area:cover
+}
+
+.song_list {
+    grid-area:cover
+}
+
+.anecdotes {
+    grid-area:anecdotes
 }
