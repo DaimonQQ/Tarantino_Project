@@ -1,6 +1,9 @@
 * {
     font-family: "Barlow Semi Condensed", serif;
     box-sizing: border-box;
+    color: white;
+    
+    --width-size:2.2vw;
 }
 
 h1 {
@@ -12,15 +15,54 @@ body {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 body > div {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     
     border-radius: 20px;
 
     padding: 20px;
     
-    margin: 30px;
-    margin-top: 80px;
+    margin: 80px 30px;
+}
+
+header h1 {
+    font-size: calc(2.5 * var(--width-size));
+    font-family: "Bungee Shade";
+}
+
+nav  {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+nav div {
+    font-size: var(--width-size);
+    color: black;
+    text-align: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+.marked {
+    font-weight: bold;
+    border: 1px solid white;
+    box-shadow: 1px 1px 10px white;
+}
+
+article {
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    border-radius: 20px;
+    
+    border: 1px solid white;
+    
+    margin: 20px 0;
+
+    padding: 10px;
 }
