@@ -78,12 +78,12 @@ article {
     
     grid-gap: 10px;
     
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 8fr 6fr 7fr;
+    grid-template-rows: 8fr 6fr 7fr;
     
     grid-template-areas: 
         "album_data album_data cover"
-        "album_data album_data cover"
+        "album_data album_data list"
         "anecdotes anecdotes anecdotes"
     ;
 }
@@ -93,13 +93,15 @@ article {
 }
 
 .cover {
-    grid-area:cover
+    grid-area:cover;
 }
 
 .song_list {
-    grid-area:cover
+    grid-area:list;
+    display: flex;
 }
 
+
 .anecdotes {
-    grid-area:anecdotes
+    grid-area:anecdotes;
 }
