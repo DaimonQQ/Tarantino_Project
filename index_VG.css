@@ -135,4 +135,43 @@ article {
     gap: 1vh;
     padding: 0;
 }
+
+#are_you_experienced > .anecdotes> li:nth-child(1) {
+    background-color: black;
+    padding: 20px;
+    height: 200px;
+}
+#are_you_experienced > .anecdotes> li:nth-child(2) {
+    
+    padding: 20px;
+    height: 200px;
+}
+#are_you_experienced > .anecdotes> li:nth-child(3) {
+    background-color: black;
+    padding: 20px;
+    height: 200px;
+}
+#are_you_experienced > .anecdotes> li:nth-child(4) {
+    display: none;
+}
+#are_you_experienced > .anecdotes> li:nth-child(5) {
+    display: none;
+}
+#are_you_experienced > .anecdotes> li:nth-child(6) {
+    background-image: url("file:///Users/lucasff/Skola/Malmo%CC%88%20Universitet/DU1/Projekt/media/500px.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    height: 200px;
+}
+#are_you_experienced > .anecdotes> li:nth-child(7) {
+    background-color: black;
+    padding: 20px;
+    height: 200px;
+}
+
+#axis_bold_as_love > .anecdotes> li:nth-child(1) {
+    padding: 20px;
+    height: 200px;
 }
