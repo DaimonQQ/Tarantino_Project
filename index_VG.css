@@ -308,4 +308,319 @@ article {
     height: 200px;
     border-radius: 20px 20px 0 20px;
 }
+
+@media (min-width: 1111px) {
+    body{
+        font-size: 16.65px;
+    }
+}
+
+@media (max-width: 900px) {
+    body{
+        font-size: 13.5px;
+    }
+
+    .album_data h1 {
+        font-size: 20.7px;
+    }
+
+    .album_data h2 {
+        font-size: 15.3px;
+    }
+
+    header h1 {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 854px) {
+    header h1 {
+        font-size: 75;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .best {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 70px;
+    }
+
+    article {
+        padding: 12px;
+    }
+
+    .cover {
+        grid-row: 1;
+        grid-column: 1/5;
+    }
+
+    .show_hover {
+        border-radius: 20px 0 0 20px;
+    }
+
+    .show_not_hover {
+        display: none;
+    }
+
+    .show_not_hover:hover {
+        display: none;
+    }
+
+    .song_list {
+        grid-row: 1;
+        grid-column: 5/8;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .song_list div {
+        padding-top: 15px;
+    }
+
+    .song_list > div:first-child{
+        border-radius: 0 0 20px 0;
+        padding-bottom: 15px;
+        flex-grow: 1;
+    }
+
+    .song_list h2 {
+        font-size: 24px;
+    }
+
+    .album_data {
+        grid-column: 1/8;
+    }
+
+    .album_data h1 {
+        font-size: 45px;
+        padding-top: 10px;
+    }
+
+    .album_data h2 {
+        font-size: 25px;
+    }
+
+    .album_data p {
+        font-size: 16px;
+    }
+
+    .album_data ul {
+        font-size: 16px;
+    }
+
+    .anecdotes {
+        grid-column: 1/span 8;
+        grid-template-columns: repeat(4, 1fr);
+        display: grid;
+    }
+
+    #are_you_experienced > .anecdotes> li:nth-child(6) {
+        grid-row: 2;
+        grid-column: 2/3;
+    }
+
+    .anecdotes li:nth-of-type(1) {
+        grid-column: 1 / 2;
+    }
+
+    .anecdotes li:nth-of-type(7){
+        grid-column: 3 / 4;
+        grid-row: 2;
+    }
+
+    .empty {
+        grid-column: 3 / 4;
+    }
+
+    axis_bold_as_love .anecdotes li:first-of-type{
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    axis_bold_as_love .anecdotes li:nth-of-type(2){
+        grid-column: 3 / 4;
+        grid-row: 1;
+    }
+
+    axis_bold_as_love .anecdotes li:nth-of-type(5){
+        grid-column: 2 / 4;
+        grid-row: 2;
+    }
+
+    axis_bold_as_love .anecdotes li:nth-of-type(6){
+        grid-column: 4 / 5;
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 596px) {
+    .anecdotes {
+        font-size: 2.1vw;
+    }
+
+    header h1 {
+        font-size: 50px ;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    body {
+        margin-top: 0;
+        margin-bottom: 0;
+        
+    }
+    main {
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+    
+    body > div > div  {
+        border-radius: 0;
+    
+        padding: 0;
+        
+        overflow: hidden;
+    }
+
+    nav {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    article {
+        display:inline-flex;
+        flex-direction: column;
+        margin: auto 20px;
+    }
+    
+    article div:nth-child(1){
+        order:3;
+    }
+    article div:nth-child(2){
+        order:1;
+    }
+    article div:nth-child(3){
+        order:2;
+    }
+    article ul{
+        order:4;
+    }
+
+    .song_list {
+        grid-row: 2;
+        grid-column: 1;
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+    }
+
+    .song_list div {
+        padding-top: 15px;
+        padding-bottom: 20px;
+        font-size: 14px;
+        flex-basis: 200px;
+    }
+
+    .song_list div:nth-child(1){
+        order: 1;
+        border-radius: 0 0 0 20px;
+    }
+
+    .song_list div:nth-child(2){
+        order: 2;
+        border-radius: 0 0 20px 0;
+    }
+
+    .cover {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    
+    cover img {
+        height: 418px;
+        margin: 0;
+        margin-bottom: -10px;
+    }
+
+    .show_hover {
+        border-radius: 20px 20px 0 0;
+        padding-bottom: 10px;
+    }
+
+    .album_data {
+        grid-row: 3;
+    }
+
+    .album_data h1 {
+        font-size: 35px;
+    }
+
+    .album_data h2 {
+        font-size: 22px;
+    }
+
+    .album_data p {
+        font-size: 17px;
+    }
+
+    .album_data ul {
+        font-size: 17px;
+    }
+
+    .anecdotes {
+        display: flex;
+        
+        gap: 5px;
+        font-size: 15px;
+    }
+
+    .anecdotes li {
+        height: 23vh;
+    }
+
+    .anecdotes li:nth-of-type(3){
+        grid-column: 2/4;
+        grid-row: 1;
+    }
+
+    axis_bold_as_love .anecdotes li{
+        margin-top: 0;
+    }
+
+    axis_bold_as_love .anecdotes li:nth-of-type(1){
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+
+    axis_bold_as_love .anecdotes li:nth-of-type(2){
+        grid-column: 3/4;
+        grid-row: 1;
+    }
+
+    axis_bold_as_love .anecdotes li:nth-of-type(5){
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+
+    axis_bold_as_love .anecdotes li:nth-of-type(6){
+        grid-column: 3/4;
+    }
+
+    footer {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
 }
