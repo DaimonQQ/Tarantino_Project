@@ -3,7 +3,6 @@
     color: white;
     
     --width-size:2.2vw;
-    --universal: 1.224vw;
 }
 
 h1 {
@@ -31,9 +30,9 @@ body > div{
 body > div > div  {
     background-color: rgba(0, 0, 0, 0.4);
     
-    border-radius: var(--universal);
+    border-radius: 20px;
 
-    padding: var(--universal);
+    padding: 20px;
 }
 
 header h1 {
@@ -45,7 +44,6 @@ nav  {
     display: flex;
     justify-content: space-evenly;
     gap: 5px;
-    margin-bottom: calc(7.5 * var(--universal));
 }
 
 nav div {
@@ -59,39 +57,28 @@ nav div {
     border-radius: 10px;
 }
 
-nav div:active {
-    cursor: pointer;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
 .marked {
     font-weight: bold;
     border: 1px solid white;
     box-shadow: 1px 1px 10px white;
 }
-.marked:active {
-    cursor: none;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.5);
-}
 
 article {
     background-color: rgba(0, 0, 0, 0.5);
     
-    border-radius: var(--universal);
+    border-radius: 20px;
     
     border: 1px solid white;
     
     margin: 20px 0;
 
-    padding: var(--universal);
+    padding: 10px;
     
     display: grid;
     
     grid-gap: 10px;
     
-    grid-template-columns: 8fr 6fr 7fr ;
+    grid-template-columns: 1fr 1fr ;
     
     grid-template-areas: 
         "album_data album_data cover"
@@ -101,97 +88,43 @@ article {
 }
 
 .album_data {
-     /*! grid-area:album_data; */ 
-     grid-area: initial;
-}
-
-.album_data h1 {
-    margin: 0;
-    font-weight: 100;
-    font-size: clamp(24px,calc(1.3 * var(--width-size)),31.7667px);
-}
-.album_data h2 {
-    margin-top: 0;
-    margin-bottom: calc(5 * var(--universal));
-    font-size: clamp(16px,calc(1.3 * var(--width-size)),24px);
-}
-.album_data div:nth-child(2) {
-    margin-top: 0;
-    margin-bottom: calc(5 * var(--universal));
-}
-
-.song_list h2 {
-    font-size: clamp(12px,calc(0.8 * var(--width-size)),16px);
-
-}
-
-.album_data p,li {
-    font-size: clamp(12px,calc(0.7 * var(--width-size)),16px);
+    grid-area:album_data;
 }
 
 .cover {
     grid-area:cover;
 }
 
-.cover img {
-    height: calc(20 * var(--width-size));
-}
 
 .show_not_hover {
     display: none;
 }
 .show_hover {
     border-radius: 20px 20px 0 0;
-    
 }
+
 
 .song_list {
     grid-area:list;
     display: flex;
     gap: 1vh;
-    color: black;
-}
-#axis_bold_as_love .song_list {
-    /*! grid-area:list; */
-    display: flex;
-    gap: 1vh;
-    color: black;
 }
 
-#axis_bold_as_love .song_list div {
-    display: flex;
-    background-color: #fff;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-direction: column;
-    padding: calc(1.5 * var(--universal));
-    justify-content: start;
-}
-.song_list div {
-    display: flex;
-    background-color: rgb(245, 190, 25);
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-direction: column;
-    padding: calc(1.5 * var(--universal));
-    justify-content: start;
-}
 .song_list > div:nth-child(1) {
     border-radius: 0 0 0 20px;
+    background-color: black;
+    flex-basis: 0;
+    flex-grow: 1;
 }
 .song_list > div:nth-child(2) {
     border-radius: 0 0 20px 0;
-}
-
-.song_list h2 {
-    margin: 0;
+    background-color: black;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 .song_list ul {
     list-style-type: decimal;
-    list-style-position: inside;
-    padding: 0;
-    margin: 0;
 }
 
 .anecdotes {
@@ -201,34 +134,22 @@ article {
     align-items: center;
     gap: 1vh;
     padding: 0;
-    justify-content: center;
-    margin: 0;
-}
-
-#are_you_experienced .anecdotes li {
-    display: flex;
-    align-items: center;
-    font-size: calc(3 / var(--width-size));
-    color: rgb(245, 190, 25);
 }
 
 #are_you_experienced > .anecdotes> li:nth-child(1) {
-    background-color: rgb(191, 26, 0);
-    padding: var(--universal);
+    background-color: black;
+    padding: 20px;
     height: 200px;
-    border-radius: 20px 0 20px 20px;
 }
 #are_you_experienced > .anecdotes> li:nth-child(2) {
     
-    padding: var(--universal);
+    padding: 20px;
     height: 200px;
 }
 #are_you_experienced > .anecdotes> li:nth-child(3) {
-    background-color: rgb(191, 26, 0);
-    padding: var(--universal);
+    background-color: black;
+    padding: 20px;
     height: 200px;
-    border-radius: 20px 20px 20px 0;
-
 }
 #are_you_experienced > .anecdotes> li:nth-child(4) {
     display: none;
@@ -237,390 +158,20 @@ article {
     display: none;
 }
 #are_you_experienced > .anecdotes> li:nth-child(6) {
-    display: none;
-}
-#are_you_experienced > .anecdotes> li:nth-child(6) {
-    background-image: url("file:///Users/lucasff/Skola/Malmo%CC%88%20Universitet/DU1/Projekt/media/Kill_Bill_Still.jpg");
+    background-image: url("file:///Users/lucasff/Skola/Malmo%CC%88%20Universitet/DU1/Projekt/media/500px.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: var(--universal);
+    padding: 20px;
     height: 200px;
-    border-radius: 0 20px 20px 20px;
-    color: black;
-    text-align: right;
-    display: flex;
-    justify-content: end;
-    align-items: end;
 }
 #are_you_experienced > .anecdotes> li:nth-child(7) {
-    background-color: rgb(191, 26, 0);
-    padding: var(--universal);
+    background-color: black;
+    padding: 20px;
     height: 200px;
-    border-radius: 20px 20px 0 20px;
 }
 
-#axis_bold_as_love .anecdotes> li {
-    display: flex;
-    align-items: center;
-    /*! font-size: calc(0.6 * var(--width-size)); */
-    flex-grow: 1;
-    flex-basis: 0;
-    color: #d11a20;
-    
-}
 #axis_bold_as_love > .anecdotes> li:nth-child(1) {
-    background-color: #000;
-    padding: var(--universal);
+    padding: 20px;
     height: 200px;
-    border-radius: 20px 20px 20px 0;
-    flex-grow: 2;
-}
-#axis_bold_as_love > .anecdotes> li:nth-child(2) {
-    background-color: #000;
-    padding: var(--universal);
-    height: 200px;
-    border-radius: 0 20px 20px 20px;
-}
-#axis_bold_as_love > .anecdotes> li:nth-child(3) {
-    display: none;
-}
-#axis_bold_as_love > .anecdotes> li:nth-child(4) {
-    display: none;
-}
-#axis_bold_as_love > .anecdotes> li:nth-child(5) {
-    background-image: url("file:///Users/lucasff/Skola/Malmo%CC%88%20Universitet/DU1/Projekt/media/Reservoire_Dogs_Still.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: var(--universal);
-    height: 200px;
-    flex-basis: 0;
-    flex-grow: 2;
-    border-radius: 0 20px 20px 20px;
-    display: flex;
-    justify-content: start;
-    align-items: end;
-}
-#axis_bold_as_love > .anecdotes> li:nth-child(6) {
-    background-color: #000;
-    padding: var(--universal);
-    height: 200px;
-    border-radius: 20px 20px 0 20px;
-}
-
-@media (min-width: 1111px) {
-    body{
-        font-size: 16.65px;
-    }
-}
-
-@media (max-width: 900px) {
-    body{
-        font-size: 13.5px;
-    }
-
-    .album_data h1 {
-        font-size: 20.7px;
-    }
-
-    .album_data h2 {
-        font-size: 15.3px;
-    }
-
-    header h1 {
-        font-size: 4vw;
-    }
-}
-
-@media (max-width: 854px) {
-    header h1 {
-        font-size: 75;
-    }
-}
-
-@media (max-width: 800px) {
-
-    .best {
-        grid-template-columns: repeat(7, 1fr);
-    }
-
-    header h1 {
-        text-align: center;
-        font-size: 70px;
-    }
-
-    article {
-        padding: 12px;
-    }
-
-    .cover {
-        grid-row: 1;
-        grid-column: 1/5;
-    }
-
-    .show_hover {
-        border-radius: 20px 0 0 20px;
-    }
-
-    .show_not_hover {
-        display: none;
-    }
-
-    .show_not_hover:hover {
-        display: none;
-    }
-
-    .song_list {
-        grid-row: 1;
-        grid-column: 5/8;
-        display: flex;
-        flex-direction: column;
-        margin-top: 0;
-        margin-left: 10px;
-        font-size: 13px;
-    }
-
-    .song_list div {
-        padding-top: 15px;
-    }
-
-    .song_list > div:first-child{
-        border-radius: 0 0 20px 0;
-        padding-bottom: 15px;
-        flex-grow: 1;
-    }
-
-    .song_list h2 {
-        font-size: 24px;
-    }
-
-    .album_data {
-        grid-column: 1/8;
-    }
-
-    .album_data h1 {
-        font-size: 45px;
-        padding-top: 10px;
-    }
-
-    .album_data h2 {
-        font-size: 25px;
-    }
-
-    .album_data p {
-        font-size: 16px;
-    }
-
-    .album_data ul {
-        font-size: 16px;
-    }
-
-    .anecdotes {
-        grid-column: 1/span 8;
-        grid-template-columns: repeat(4, 1fr);
-        display: grid;
-    }
-
-    #are_you_experienced > .anecdotes> li:nth-child(6) {
-        grid-row: 2;
-        grid-column: 2/3;
-    }
-
-    .anecdotes li:nth-of-type(1) {
-        grid-column: 1 / 2;
-    }
-
-    .anecdotes li:nth-of-type(7){
-        grid-column: 3 / 4;
-        grid-row: 2;
-    }
-
-    .empty {
-        grid-column: 3 / 4;
-    }
-
-    axis_bold_as_love .anecdotes li:first-of-type{
-        grid-column: 1 / 3;
-        grid-row: 1;
-    }
-
-    axis_bold_as_love .anecdotes li:nth-of-type(2){
-        grid-column: 3 / 4;
-        grid-row: 1;
-    }
-
-    axis_bold_as_love .anecdotes li:nth-of-type(5){
-        grid-column: 2 / 4;
-        grid-row: 2;
-    }
-
-    axis_bold_as_love .anecdotes li:nth-of-type(6){
-        grid-column: 4 / 5;
-        grid-row: 2;
-    }
-}
-
-@media (max-width: 596px) {
-    .anecdotes {
-        font-size: 2.1vw;
-    }
-
-    header h1 {
-        font-size: 50px ;
-    }
-}
-
-@media (max-width: 500px) {
-    
-    body {
-        margin-top: 0;
-        margin-bottom: 0;
-        
-    }
-    main {
-        gap: 10px;
-    }
-
-    header h1 {
-        font-size: 40px;
-    }
-    
-    body > div > div  {
-        border-radius: 0;
-    
-        padding: 0;
-        
-        overflow: hidden;
-    }
-
-    nav {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    article {
-        display:inline-flex;
-        flex-direction: column;
-        margin: auto 20px;
-    }
-    
-    article div:nth-child(1){
-        order:3;
-    }
-    article div:nth-child(2){
-        order:1;
-    }
-    article div:nth-child(3){
-        order:2;
-    }
-    article ul{
-        order:4;
-    }
-
-    .song_list {
-        grid-row: 2;
-        grid-column: 1;
-        display: flex;
-        flex-direction: row;
-        margin-left: 0;
-    }
-
-    .song_list div {
-        padding-top: 15px;
-        padding-bottom: 20px;
-        font-size: 14px;
-        flex-basis: 200px;
-    }
-
-    .song_list div:nth-child(1){
-        order: 1;
-        border-radius: 0 0 0 20px;
-    }
-
-    .song_list div:nth-child(2){
-        order: 2;
-        border-radius: 0 0 20px 0;
-    }
-
-    .cover {
-        grid-row: 1;
-        grid-column: 1;
-    }
-    
-    cover img {
-        height: 418px;
-        margin: 0;
-        margin-bottom: -10px;
-    }
-
-    .show_hover {
-        border-radius: 20px 20px 0 0;
-        padding-bottom: 10px;
-    }
-
-    .album_data {
-        grid-row: 3;
-    }
-
-    .album_data h1 {
-        font-size: 35px;
-    }
-
-    .album_data h2 {
-        font-size: 22px;
-    }
-
-    .album_data p {
-        font-size: 17px;
-    }
-
-    .album_data ul {
-        font-size: 17px;
-    }
-
-    .anecdotes {
-        display: flex;
-        
-        gap: 5px;
-        font-size: 15px;
-    }
-
-    .anecdotes li {
-        height: 23vh;
-    }
-
-    .anecdotes li:nth-of-type(3){
-        grid-column: 2/4;
-        grid-row: 1;
-    }
-
-    axis_bold_as_love .anecdotes li{
-        margin-top: 0;
-    }
-
-    axis_bold_as_love .anecdotes li:nth-of-type(1){
-        grid-column: 1/3;
-        grid-row: 1;
-    }
-
-    axis_bold_as_love .anecdotes li:nth-of-type(2){
-        grid-column: 3/4;
-        grid-row: 1;
-    }
-
-    axis_bold_as_love .anecdotes li:nth-of-type(5){
-        grid-column: 1/3;
-        grid-row: 2;
-    }
-
-    axis_bold_as_love .anecdotes li:nth-of-type(6){
-        grid-column: 3/4;
-    }
-
-    footer {
-        margin-left: 20px;
-        margin-bottom: 10px;
-    }
-
 }
