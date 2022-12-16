@@ -198,10 +198,14 @@ article {
     display: none;
 }
 #are_you_experienced > .anecdotes> li:nth-child(6) {
-    background-image: url("file:///Users/lucasff/Skola/Malmo%CC%88%20Universitet/DU1/Projekt/media/500px.jpg");
-    background-position: center;
+    display: flex;
+    align-items: end;
+    text-align: left;
+    background-image: url("./media/Kill_Bill_Quention_Interaction.jpg");
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 50%;
     padding: 20px;
     height: 200px;
 }
@@ -210,8 +214,38 @@ article {
     padding: 20px;
     height: 200px;
 }
-
 #axis_bold_as_love > .anecdotes> li:nth-child(1) {
+    background-color: black;
+    padding: 20px;
+    height: 200px;
+}
+#axis_bold_as_love > .anecdotes> li:nth-child(2) {
+    background-color: black;
+    padding: 20px;
+    height: 200px;
+}
+#axis_bold_as_love > .anecdotes> li:nth-child(3) {
+    display: none;
+}
+#axis_bold_as_love > .anecdotes> li:nth-child(4) {
+    display: none;
+}
+#axis_bold_as_love > .anecdotes> li:nth-child(5) {
+    display: flex;
+    text-align: right;
+    align-items: end;
+    justify-content: end;
+    color: #000;
+    background-image: url("./media/Reservoire_Dogs_Quentin_Interaction.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150%;
+    padding: 20px;
+    height: 200px;
+}
+#axis_bold_as_love > .anecdotes> li:nth-child(6) {
+    background-color: black;
     padding: 20px;
     height: 200px;
 }
