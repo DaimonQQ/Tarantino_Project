@@ -57,10 +57,22 @@ nav div {
     border-radius: 10px;
 }
 
+nav div:active {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .marked {
     font-weight: bold;
     border: 1px solid white;
     box-shadow: 1px 1px 10px white;
+}
+
+.marked:active {
+    cursor: default;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 article {
