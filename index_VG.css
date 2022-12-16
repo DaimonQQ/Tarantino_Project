@@ -18,7 +18,7 @@ body {
 }
 
 body > div{
-    background-image: url("file:///Users/lucasff/Skola/Malmo%CC%88%20Universitet/DU1/Projekt/media/33537_quentin-tarantino-premiere-django-desencadenado-paris.webp");
+    background-image: url("./media/Quentin_Tarantino_Background_2.jpg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
