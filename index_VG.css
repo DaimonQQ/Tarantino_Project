@@ -108,23 +108,35 @@ article {
     grid-area:list;
     display: flex;
     gap: 1vh;
+    color: white;
 }
 
+.song_list div {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    justify-content: start;
+    flex-direction: column;
+    padding: calc(var(--width-size) / 2);
+}
 .song_list > div:nth-child(1) {
     border-radius: 0 0 0 20px;
     background-color: black;
-    flex-basis: 0;
-    flex-grow: 1;
 }
 .song_list > div:nth-child(2) {
     border-radius: 0 0 20px 0;
     background-color: black;
-    flex-grow: 1;
-    flex-basis: 0;
+}
+
+.song_list h2 {
+    margin: 0;
 }
 
 .song_list ul {
     list-style-type: decimal;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
 }
 
 .anecdotes {
