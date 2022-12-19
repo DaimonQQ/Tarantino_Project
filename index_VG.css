@@ -1,8 +1,9 @@
 :root {
+    --width-size:2.2vw;
+    
+    font-size: calc(var(--width-size) / 1.25);
     font-family: "Barlow Semi Condensed", serif;
     color: white;
-    
-    --width-size:2.2vw;
 }
 
 h1 {
@@ -106,8 +107,9 @@ article {
 .cover {
     grid-area:cover;
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: calc(var(--width-size) * 20.45);
+    height: calc(var(--width-size) * 20.45);
+            /* Width reference: 1111px */
 }
 
 .show_not_hover {
@@ -145,7 +147,8 @@ article {
     flex-grow: 1;
     justify-content: start;
     flex-direction: column;
-    padding: calc(var(--width-size) / 2);
+    padding: calc(var(--width-size) / 1.336);
+}
 }
 .song_list > div:nth-child(1) {
     border-radius: 0 0 0 20px;
@@ -165,6 +168,7 @@ article {
     list-style-position: inside;
     margin: 0;
     padding: 0;
+    /* Padding:0 to achieve symmetrical starting points for li and h2 */
 }
 
 .anecdotes {
@@ -187,7 +191,6 @@ article {
     height: 200px;
 }
 #are_you_experienced > .anecdotes> li:nth-child(3) {
-    background-color: black;
     padding: 20px;
     height: 200px;
 }
@@ -248,4 +251,19 @@ article {
     background-color: black;
     padding: 20px;
     height: 200px;
+}
+
+@media (min-width: 1111px) {
+    header h1 {
+        font-size: 56px;
+    }
+    nav div {
+        font-size: 24px;
+    }
+    h1, h2 {
+        font-size: 29px;
+    }
+    p, li {
+        font-size: 19.5px;
+    }
 }
