@@ -91,7 +91,7 @@ article {
     
     grid-gap: 10px;
     
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 8fr 6fr 7fr;
     
     grid-template-areas: 
         "album_data album_data cover"
@@ -103,6 +103,10 @@ article {
 .album_data {
     grid-area:album_data;
 }
+.album_data p {
+    max-width: 45ch;
+}
+
 
 .cover {
     grid-area:cover;
@@ -110,6 +114,8 @@ article {
     width: calc(var(--width-size) * 20.45);
     height: calc(var(--width-size) * 20.45);
             /* Width reference: 1111px */
+    max-width: 500px;
+    max-height: 500px;
 }
 
 .show_not_hover {
@@ -133,7 +139,6 @@ article {
     border-radius: 20px 20px 0 0;
 }
 
-
 .song_list {
     grid-area:list;
     display: flex;
@@ -142,6 +147,7 @@ article {
 }
 
 .song_list div {
+    color: #000;
     display: flex;
     flex-basis: 0;
     flex-grow: 1;
@@ -149,6 +155,11 @@ article {
     flex-direction: column;
     padding: calc(var(--width-size) / 1.336);
 }
+#are_you_experienced .song_list div {
+    background-color: #f8c11c;
+}
+#axis_bold_as_love .song_list div {
+    background-color: #db1919;
 }
 .song_list > div:nth-child(1) {
     border-radius: 0 0 0 20px;
@@ -180,13 +191,16 @@ article {
     padding: 0;
 }
 
+
+#are_you_experienced .anecdotes li {
+    background-color: #db1919;
+}
 #are_you_experienced > .anecdotes> li:nth-child(1) {
-    background-color: black;
     padding: 20px;
     height: 200px;
 }
 #are_you_experienced > .anecdotes> li:nth-child(2) {
-    
+    background-color: rgba(0, 0, 0, 0.0);
     padding: 20px;
     height: 200px;
 }
@@ -213,17 +227,19 @@ article {
     height: 200px;
 }
 #are_you_experienced > .anecdotes> li:nth-child(7) {
-    background-color: black;
     padding: 20px;
     height: 200px;
 }
+
+#axis_bold_as_love .anecdotes li{
+    background-color: #000;
+
+}
 #axis_bold_as_love > .anecdotes> li:nth-child(1) {
-    background-color: black;
     padding: 20px;
     height: 200px;
 }
 #axis_bold_as_love > .anecdotes> li:nth-child(2) {
-    background-color: black;
     padding: 20px;
     height: 200px;
 }
@@ -240,15 +256,14 @@ article {
     justify-content: end;
     color: #000;
     background-image: url("./media/Reservoire_Dogs_Quentin_Interaction.jpg");
-    background-position: left;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 150%;
     padding: 20px;
     height: 200px;
 }
 #axis_bold_as_love > .anecdotes> li:nth-child(6) {
-    background-color: black;
     padding: 20px;
     height: 200px;
 }
