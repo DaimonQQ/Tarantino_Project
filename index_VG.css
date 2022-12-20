@@ -282,3 +282,123 @@ article {
         font-size: 19.5px;
     }
 }
+
+@media (max-width: 799px) {
+    article {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .cover {
+    order: 1;
+    }
+    .song_list {
+    order: 2;
+    }
+    .album_data {
+    order: 3;
+    }
+    .anecdotes {
+    order: 4;
+    }
+
+    .cover {
+    max-width: none;
+    max-height: none;
+    width: calc(var(--width-size) * 21);
+    height: calc(var(--width-size) * 21);
+    }
+
+    /* Specific size for 2nd article b/c longer song-lists */
+    #axis_bold_as_love .cover {
+    width: calc(var(--width-size) * 23.58);
+    height: calc(var(--width-size) * 23.58);
+    }
+
+    .song_list {
+    flex-direction: column;
+    flex-grow: 1;
+    }
+
+    .song_list div {
+    display: block;
+    font-size: var(--width-size);
+    }
+
+    .album_data {
+        flex-grow: 1;
+    }
+    
+    .anecdotes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap:calc(var(--width-size) / 3);
+    }
+    
+    .anecdotes li {
+        padding: 7.5px;
+    }
+    
+    #are_you_experienced .anecdotes {
+        grid-template-areas: 
+        " First   Empty_2 Second Second"
+        "Empty_1  Picture Third Empty_4"
+        ;
+    }
+    
+    #are_you_experienced > .anecdotes> li:nth-child(1) {
+        grid-area: First;
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(2) {
+        background-color: rgba(0, 0, 0, 0.0);
+        grid-area: Empty_2;
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(3) {
+        grid-area: Second;
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(4) {
+        display: block;
+        grid-area: Empty_1;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(5) {
+        display: block;
+        grid-area: Empty_4;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(6) {
+    grid-area: Picture;
+    width: initial;
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(7) {
+    grid-area: Third;
+    }
+    
+    #axis_bold_as_love .anecdotes {
+        grid-template-areas: 
+        "First   First     Second Empty_4"
+        "Empty_1 Picture  Picture  Third "
+        ;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(1) {
+        grid-area: First;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(2) {
+        grid-area: Second;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(3) {
+        display: block;
+        grid-area: Empty_4;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(4) {
+        display: block;
+        grid-area: Empty_1;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(5) {
+        grid-area: Picture;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(6) {
+        grid-area: Third;
+    }
+}
