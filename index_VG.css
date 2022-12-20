@@ -144,6 +144,7 @@ article {
     display: flex;
     gap: 1vh;
     color: white;
+    
 }
 
 .song_list div {
@@ -191,23 +192,20 @@ article {
     padding: 0;
 }
 
+.anecdotes li {
+    height: 200px;
+    padding: 20px;
+}
+
 
 #are_you_experienced .anecdotes li {
     background-color: #db1919;
 }
-#are_you_experienced > .anecdotes> li:nth-child(1) {
-    padding: 20px;
-    height: 200px;
-}
+#are_you_experienced > .anecdotes> li:nth-child(1) {}
 #are_you_experienced > .anecdotes> li:nth-child(2) {
     background-color: rgba(0, 0, 0, 0.0);
-    padding: 20px;
-    height: 200px;
 }
-#are_you_experienced > .anecdotes> li:nth-child(3) {
-    padding: 20px;
-    height: 200px;
-}
+#are_you_experienced > .anecdotes> li:nth-child(3) {}
 #are_you_experienced > .anecdotes> li:nth-child(4) {
     display: none;
 }
@@ -223,26 +221,15 @@ article {
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
-    padding: 20px;
-    height: 200px;
 }
-#are_you_experienced > .anecdotes> li:nth-child(7) {
-    padding: 20px;
-    height: 200px;
-}
+#are_you_experienced > .anecdotes> li:nth-child(7) {}
 
 #axis_bold_as_love .anecdotes li{
     background-color: #000;
 
 }
-#axis_bold_as_love > .anecdotes> li:nth-child(1) {
-    padding: 20px;
-    height: 200px;
-}
-#axis_bold_as_love > .anecdotes> li:nth-child(2) {
-    padding: 20px;
-    height: 200px;
-}
+#axis_bold_as_love > .anecdotes> li:nth-child(1) {}
+#axis_bold_as_love > .anecdotes> li:nth-child(2) {}
 #axis_bold_as_love > .anecdotes> li:nth-child(3) {
     display: none;
 }
@@ -260,15 +247,16 @@ article {
     background-repeat: no-repeat;
     background-size: cover;
     width: 150%;
-    padding: 20px;
-    height: 200px;
+    
+    
 }
-#axis_bold_as_love > .anecdotes> li:nth-child(6) {
-    padding: 20px;
-    height: 200px;
-}
+#axis_bold_as_love > .anecdotes> li:nth-child(6) {}
 
 @media (min-width: 1111px) {
+    article {
+    grid-template-columns: 8fr 6fr 500px;
+    }
+    
     header h1 {
         font-size: 56px;
     }
