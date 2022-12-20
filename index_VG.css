@@ -2,7 +2,7 @@
     --width-size:2.2vw;
     
     font-size: calc(var(--width-size) / 1.25);
-    font-family: "Barlow Semi Condensed", serif;
+    font-family: "Barlow Semi Condensed";
     color: white;
 }
 
@@ -103,10 +103,19 @@ article {
 .album_data {
     grid-area:album_data;
 }
+.album_data h1, .album_data h2 {
+    margin: 0;
+}
+
+.album_data h2, .album_data ul {
+    margin-bottom: calc(var(--width-size) * 5);
+}
 .album_data p {
     max-width: 45ch;
 }
-
+.album_data ul {
+    list-style-type: none;
+}
 
 .cover {
     grid-area:cover;
@@ -144,7 +153,6 @@ article {
     display: flex;
     gap: 1vh;
     color: white;
-    
 }
 
 .song_list div {
@@ -157,7 +165,7 @@ article {
     padding: calc(var(--width-size) / 1.336);
 }
 #are_you_experienced .song_list div {
-    background-color: #f8c11c;
+    background-color: #fcde2e;
 }
 #axis_bold_as_love .song_list div {
     background-color: #db1919;
@@ -173,6 +181,7 @@ article {
 
 .song_list h2 {
     margin: 0;
+    font-weight: 300;
 }
 
 .song_list ul {
@@ -201,11 +210,15 @@ article {
 #are_you_experienced .anecdotes li {
     background-color: #db1919;
 }
-#are_you_experienced > .anecdotes> li:nth-child(1) {}
+#are_you_experienced > .anecdotes> li:nth-child(1) {
+    border-radius: 20px 0 20px 20px;
+}
 #are_you_experienced > .anecdotes> li:nth-child(2) {
     background-color: rgba(0, 0, 0, 0.0);
 }
-#are_you_experienced > .anecdotes> li:nth-child(3) {}
+#are_you_experienced > .anecdotes> li:nth-child(3) {
+    border-radius: 20px 20px 20px 0;
+}
 #are_you_experienced > .anecdotes> li:nth-child(4) {
     display: none;
 }
@@ -213,6 +226,7 @@ article {
     display: none;
 }
 #are_you_experienced > .anecdotes> li:nth-child(6) {
+    border-radius: 0 20px 20px 20px;
     display: flex;
     align-items: end;
     text-align: left;
@@ -222,14 +236,20 @@ article {
     background-size: cover;
     width: 50%;
 }
-#are_you_experienced > .anecdotes> li:nth-child(7) {}
+#are_you_experienced > .anecdotes> li:nth-child(7) {
+    border-radius: 20px 20px 20px 0;
+}
 
 #axis_bold_as_love .anecdotes li{
-    background-color: #000;
-
+    background-color: #fff;
+    color: #000;
 }
-#axis_bold_as_love > .anecdotes> li:nth-child(1) {}
-#axis_bold_as_love > .anecdotes> li:nth-child(2) {}
+#axis_bold_as_love > .anecdotes> li:nth-child(1) {
+    border-radius: 20px 20px 20px 0;
+}
+#axis_bold_as_love > .anecdotes> li:nth-child(2) {
+    border-radius: 0 20px 20px 20px;
+}
 #axis_bold_as_love > .anecdotes> li:nth-child(3) {
     display: none;
 }
@@ -237,6 +257,7 @@ article {
     display: none;
 }
 #axis_bold_as_love > .anecdotes> li:nth-child(5) {
+    border-radius: 20px;
     display: flex;
     text-align: right;
     align-items: end;
@@ -250,7 +271,10 @@ article {
     
     
 }
-#axis_bold_as_love > .anecdotes> li:nth-child(6) {}
+#axis_bold_as_love > .anecdotes> li:nth-child(6) {
+    border-radius: 20px 20px 0 20px;
+
+}
 
 @media (min-width: 1111px) {
     article {
@@ -271,7 +295,11 @@ article {
     }
 }
 
-@media (max-width: 799px) {
+@media (max-width: 800px) {
+    header {
+        text-align: center;
+    }
+    
     article {
     display: flex;
     flex-wrap: wrap;
@@ -288,18 +316,28 @@ article {
     .anecdotes {
     order: 4;
     }
-
+    
     .cover {
+    width: calc(var(--width-size) * 18);
+    height: calc(var(--width-size) * 18);
     max-width: none;
     max-height: none;
-    width: calc(var(--width-size) * 21);
-    height: calc(var(--width-size) * 21);
+    box-sizing: content-box;
+    flex-grow: 0;
+    border-bottom: calc(var(--width-size) * 3.1) solid #fcde2e;
+    border-radius: 0 0 0 20px;
+    }
+    
+    .cover img {
+        border-radius: 20px 0 0 0;
     }
 
-    /* Specific size for 2nd article b/c longer song-lists */
+    /* Specific size for 2nd article */
     #axis_bold_as_love .cover {
-    width: calc(var(--width-size) * 23.58);
-    height: calc(var(--width-size) * 23.58);
+    width: calc(var(--width-size) * 20);
+    height: calc(var(--width-size) * 20);
+    border-bottom: calc(var(--width-size) * 3.5) solid #db1919;
+    border-radius: 0 0 0 20px;
     }
 
     .song_list {
@@ -309,12 +347,31 @@ article {
 
     .song_list div {
     display: block;
-    font-size: var(--width-size);
+    font-size: calc(var(--width-size) / 1.2);
     }
-
+    
+    .song_list > div:nth-child(1) {
+    border-radius: 0 20px 0 0;
+    }
+    .song_list > div:nth-child(2) {
+    border-radius: 0 0 20px 0;
+    }
+    
     .album_data {
         flex-grow: 1;
+        font-size: calc(var(--width-size) / 1.15);
     }
+    .album_data h1 {
+        font-size: calc(var(--width-size) * 3);
+    }
+    .album_data h2 {
+        font-size: calc(var(--width-size) * 2);
+
+    }
+    .album_data p {
+        max-width: initial;
+    }
+    
     
     .anecdotes {
         display: grid;
@@ -324,6 +381,7 @@ article {
     
     .anecdotes li {
         padding: 7.5px;
+        height: calc(var(--width-size) * 8.5);
     }
     
     #are_you_experienced .anecdotes {
@@ -335,6 +393,7 @@ article {
     
     #are_you_experienced > .anecdotes> li:nth-child(1) {
         grid-area: First;
+        
     }
     #are_you_experienced > .anecdotes> li:nth-child(2) {
         background-color: rgba(0, 0, 0, 0.0);
@@ -359,6 +418,7 @@ article {
     }
     #are_you_experienced > .anecdotes> li:nth-child(7) {
     grid-area: Third;
+    border-radius: 20px 20px 0 20px;
     }
     
     #axis_bold_as_love .anecdotes {
@@ -385,6 +445,132 @@ article {
     }
     #axis_bold_as_love > .anecdotes> li:nth-child(5) {
         grid-area: Picture;
+        width: initial;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(6) {
+        grid-area: Third;
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: calc(var(--width-size) * 5.5);
+    }
+    
+    article {
+        flex-direction: column;
+    }
+    
+    .album_data {
+        font-size: calc(var(--width-size) * 1.25);
+    }
+    li {
+        font-size: calc(var(--width-size) * 1.1);
+    }
+    
+    .song_list {
+        flex-direction: row;
+    }
+    .song_list h2 {
+        font-size: calc(var(--width-size) * 2);
+    }
+    .song_list > div:nth-child(1) {
+        border-radius: 0 0 0 20px;
+    }
+    .song_list > div:nth-child(2) {
+        border-radius: 0 0 20px 0;
+    }
+    .cover {
+        width: auto;
+        height: calc(var(--width-size) * 30.728);
+        border: 0;
+        flex-grow: 1;
+    }
+    #axis_bold_as_love .cover {
+        width: auto;
+        height: calc(var(--width-size) * 30.728);
+        border: 0;
+        flex-grow: 1;
+    }
+    .cover img {
+        border-radius: 20px 20px 0 0;
+    }
+    
+    body > div{
+        padding: 0;
+    }
+    
+    body > div > div  {
+        border-radius: 0;
+    }
+    
+    .anecdotes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:calc(var(--width-size) / 3);
+    }
+    
+    .anecdotes li {
+        padding: 7.5px;
+        height: calc(var(--width-size) * 12);
+    }
+    
+    #are_you_experienced .anecdotes {
+        grid-template-areas: 
+        " First   Second  Second"
+        "Empty_1  Picture  Third"
+        ;
+    }
+    
+    #are_you_experienced > .anecdotes> li:nth-child(1) {
+        grid-area: First;
+        
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(2) {
+        background-color: rgba(0, 0, 0, 0.0);
+        grid-area: Empty_1;
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(3) {
+        grid-area: Second;
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(4) {
+        display: none;
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(5) {
+        display: none;
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(6) {
+    grid-area: Picture;
+    width: initial;
+    }
+    #are_you_experienced > .anecdotes> li:nth-child(7) {
+    grid-area: Third;
+    border-radius: 20px 20px 0 20px;
+    }
+    
+    #axis_bold_as_love .anecdotes {
+        grid-template-columns: repeat(3, 1fr);
+        
+        grid-template-areas: 
+        "First    First   Second"
+        "Picture  Picture  Third"
+        ;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(1) {
+        grid-area: First;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(2) {
+        grid-area: Second;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(3) {
+        display: none;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(4) {
+        display: none;
+    }
+    #axis_bold_as_love > .anecdotes> li:nth-child(5) {
+        grid-area: Picture;
+        width: initial;
     }
     #axis_bold_as_love > .anecdotes> li:nth-child(6) {
         grid-area: Third;
